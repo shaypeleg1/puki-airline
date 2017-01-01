@@ -6,7 +6,7 @@ import VueRouter from 'vue-router';
 import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact/contact';
-import CarCenter from './pages/car-center/car-center';
+import PlaneCenter from './pages/plane-center/plane-center';
 
 // Components
 import MainNav from './components/main-nav';
@@ -24,8 +24,8 @@ const routes = [
         component: Contact
       },
       {
-        path: '/car-center',
-        component: CarCenter
+        path: '/plane-center',
+        component: PlaneCenter
       },
 
       {

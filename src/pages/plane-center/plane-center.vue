@@ -1,7 +1,7 @@
 <template lang="html">
 
-  <section class="car-center">
-    <h1>Cars Center</h1>
+  <section class="plane-center">
+    <h1>Plane Center</h1>
     <car-list></car-list>
   </section>
 
@@ -13,7 +13,7 @@
 
 
   export default  {
-    name: 'car-center',
+    name: 'plane-center',
     props: [],
     mounted() {
 
@@ -36,7 +36,7 @@
 </script>
 
 <style scoped lang="scss">
-  .car-center {
+  .plane-center {
 
   }
 </style>
