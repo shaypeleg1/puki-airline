@@ -1,19 +1,19 @@
 <template lang="html">
 
-  <section class="car-center">
-    <h1>Cars Center</h1>
-    <car-list></car-list>
+  <section class="plane-center">
+    <h1>Plane Center</h1>
+    <!--<car-list></car-list>-->
   </section>
 
 </template>
 
 <script lang="js">
 
-  import CarList from 'src/components/car-list/car-list'
+  // import CarList from 'src/components/car-list/car-list'
 
 
   export default  {
-    name: 'car-center',
+    name: 'plane-center',
     props: [],
     mounted() {
 
@@ -30,13 +30,13 @@
 
     },
     components: {
-      CarList
+      // CarList
     }
 }
 </script>
 
 <style scoped lang="scss">
-  .car-center {
+  .plane-center {
 
   }
 </style>

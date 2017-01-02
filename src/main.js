@@ -1,18 +1,23 @@
 import style from './style.scss';
-import Vue from 'vue'
+import Vue from 'vue';
 import VueRouter from 'vue-router';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
 // Pages
-import Home from './pages/home';
-import About from './pages/about';
+import Home from './pages/home/home';
+import About from './pages/about/about';
 import Contact from './pages/contact/contact';
-import CarCenter from './pages/car-center/car-center';
+
+// import PlaneCenter from './pages/plane-center/plane-center';
+import PassengerCenter from './pages/passenger-center/passenger-center';
 
 // Components
-import MainNav from './components/main-nav';
+import MainNav from './components/main-nav/main-nav';
 import AppFooter from './components/app-footer';
 
 Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
 
 const routes = [
       {
@@ -23,11 +28,14 @@ const routes = [
         path: '/contact',
         component: Contact
       },
+      // {
+      //   path: '/plane-center',
+      //   component: PlaneCenter
+      // },
       {
-        path: '/car-center',
-        component: CarCenter
+        path: '/passenger-center',
+        component: PassengerCenter
       },
-
       {
         path: '/about',
         component: About
