@@ -19,7 +19,7 @@ import AppFooter from './components/app-footer';
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
-window.eventBus= new Vue();
+window.eventBus = new Vue();
 
 const routes = [
       {

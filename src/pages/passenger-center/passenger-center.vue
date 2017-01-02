@@ -36,14 +36,15 @@
     },
     methods: {
       reloadPassengers() {
-        this.axios.get('http://localhost:80/server/api/passengerAPI.php')
+        this.axios.get('http://localhost:80/airlines/api/passengerAPI.php')
           .then(res => {
             this.passengers = res.data;
           });
       },
       deletePassenger(id) {
-        this.axios.delete(`http://localhost:80/server/api/passengerAPI.php?id=5`)
+        this.axios.delete(`http://localhost:80/airlines/api/passengerAPI.php?id=${id}`)
       },
+
     },
     computed: {
 
