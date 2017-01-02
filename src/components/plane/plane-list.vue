@@ -22,11 +22,24 @@
     },
     data() {
       return {
-        planes: [{id: 1, model: 'Boing 777', seats: 352}, {id: 2, model: 'Airbus 380', seats: 280}, {id: 3, model: 'Boing 747', seats: 320}, {id: 4, model: 'Airbus a320', seats: 180}]
+        planes: []
       }
     },
     methods: {
-
+      fetchPlanes() {
+          console.log('start fetch planes!');
+          this.axios.get('http://localhost:80/airlines/api/planeAPI.php')
+            .then(response => {
+              this.planes = response.data
+              console.log(response.data);
+          })
+            .catch(error => {
+              console.log(error);
+          });
+      }
+    },
+    created() {
+       this.fetchPlanes();
     },
     computed: {
 
