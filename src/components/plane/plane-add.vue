@@ -2,7 +2,6 @@
 
 
   <section class="plane-add">
-    <h2>Add New Plane</h2>
     <div class="new-plane-form">
      <label class="subtitle is-5">Plane Model</label>
         <p class="control">
@@ -13,7 +12,7 @@
           <input class="input" type="number" placeholder="100" v-model.number="plane.seat_count">
         </p>
         <p class="control">
-          <button class="button is-primary" @click="addNewPlane">Submit</button>
+          <button class="button is-primary" @click="addPlane(plane)">Submit</button>
           <button class="button is-link" @click="isAddShow = !isAddShow">Cancel</button>
         </p>
     </div>
@@ -33,17 +32,10 @@
       }
     },
     methods: {
-      addNewPlane() {
-        this.axios.post('http://localhost:80/airlines/api/planeAPI.php', {
-          model: this.plane.model,
-          seat_count: this.plane.seat_count
-        })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      addPlane(newPlane) {
+        console.log('newPlae: ', newPlane);
+        
+        eventBus.$emit('addPlane', newPlane);
       }
     },
     created() {

@@ -5,7 +5,7 @@
     <h2>Plane Model List</h2>
     <div class="row">
       <div class="col-xs-18 col-sm-4" v-for="plane of planes">
-          <plane-preview :plane="plane"></plane-preview>
+          <plane-preview :plane="plane" @click.native="displayPlane(plane)"></plane-preview>
       </div>
     </div>
     
@@ -16,30 +16,23 @@
   import PlanePreview from '../plane/plane-preview';
   export default  {
     name: 'plane-list',
-    props: [],
+    props: ['planes'],
     mounted() {
 
     },
     data() {
       return {
-        planes: []
+        
       }
     },
     methods: {
-      fetchPlanes() {
-          console.log('start fetch planes!');
-          this.axios.get('http://localhost:80/airlines/api/planeAPI.php')
-            .then(response => {
-              this.planes = response.data
-              console.log(response.data);
-          })
-            .catch(error => {
-              console.log(error);
-          });
-      }
-    },
+        displayPlane(plane) {
+          eventBus.$emit('displayPlane', plane);
+        },
+
+      },
     created() {
-       this.fetchPlanes();
+
     },
     computed: {
 

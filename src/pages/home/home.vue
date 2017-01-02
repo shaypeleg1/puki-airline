@@ -24,6 +24,9 @@
 </script>
 
 <style scoped>
+#app {
+    padding-bottom: 60px;
+}
 h1 {
   color: lightblue;
 }
