@@ -1,24 +1,41 @@
 <template lang="html">
+  <!--{{passenger.name}}-->
+  <div class="modal" :class="{ 'is-active': shouldDisplay }">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">{{passenger.name}}</p>
+        <button @click.stop="shouldDisplay = false" class="delete"></button>
+      </header>
+      <section class="modal-card-body thumbnail">
+        <img class="img-responsive" :src="'/static/img/passenger/' + passenger.id + '.png'" alt="">
+        <div class="caption">
 
-  <section class="car-preview thumbnail">
-    <img class="img-responsive" :src="'/static/img/car/' + car.id + '.png'" alt="">
-    <div class="caption">
-      <h4>{{car.name}}</h4>
-    </div>  
-  </section>
+          <div class="btns">
+            <a class="button is-primary">More details</a>
+            <a class="button is-success">Edit</a>
+          </div>
+
+        </div>
+      </section>
+s    </div>
+  </div>
 
 </template>
 
 <script lang="js">
-  export default  {
-    name: 'car-preview',
-    props: ['car'],
+  export default {
+    name: 'passenger-details',
+    created() {
+      eventBus.$on('displayPassenger', (passenger) => { this.passenger = passenger; this.shouldDisplay = true });
+    },
     mounted() {
 
     },
     data() {
       return {
-
+        passenger: {},
+        shouldDisplay: false
       }
     },
     methods: {
@@ -27,10 +44,13 @@
     computed: {
 
     }
-}
+  }
 </script>
 
 <style scoped lang="scss">
   .car-preview {
+  }
+  img {
+    max-height: 300px;
   }
 </style>
