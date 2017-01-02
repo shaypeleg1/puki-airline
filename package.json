@@ -12,8 +12,11 @@
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "bootstrap": "^3.3.7",
+    "bulma": "^0.2.3",
     "vue": "^2.0.1",
+    "vue-axios": "^1.2.2",
     "vue-router": "^2.0.1"
   },
   "devDependencies": {
