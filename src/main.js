@@ -9,7 +9,7 @@ import Home from './pages/home/home';
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 
-// import PlaneCenter from './pages/plane-center/plane-center';
+import PlaneCenter from './pages/plane-center/plane-center';
 import PassengerCenter from './pages/passenger-center/passenger-center';
 
 // Components
@@ -28,10 +28,10 @@ const routes = [
         path: '/contact',
         component: Contact
       },
-      // {
-      //   path: '/plane-center',
-      //   component: PlaneCenter
-      // },
+      {
+        path: '/plane-center',
+        component: PlaneCenter
+      },
       {
         path: '/passenger-center',
         component: PassengerCenter

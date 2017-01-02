@@ -2,14 +2,14 @@
 
   <section class="plane-center">
     <h1>Plane Center</h1>
-    <!--<car-list></car-list>-->
+    <plane-list></plane-list>
   </section>
 
 </template>
 
 <script lang="js">
 
-  // import CarList from 'src/components/car-list/car-list'
+  import PlaneList from 'src/components/plane/plane-list'
 
 
   export default  {
@@ -30,7 +30,7 @@
 
     },
     components: {
-      // CarList
+       PlaneList
     }
 }
 </script>
