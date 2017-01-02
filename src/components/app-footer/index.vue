@@ -1,4 +1,37 @@
-<template src="./app-footer.component.html"></template>
-<script src="./app-footer.component.js"></script>
-<style src="./app-footer.component.scss" scoped lang="scss"></style>
+<template>
+
+<section class="app-footer text-center text-muted">
+  coffeerights &copy; 2017 
+</section>
+
+</template>
+<script>
+export default  {
+  name: 'app-footer',
+  props: [],
+  mounted() {
+    
+  },
+  data() {
+    return {
+      
+    }
+  },
+  methods: {
+   
+  },
+  computed: {
+
+  }
+}
+
+</script>
+<style scoped lang="scss">
+.app-footer {
+    bottom:0;
+    background:black;
+    width: 100%;
+    padding: 3px;
+}
+</style>
 
