@@ -3,7 +3,8 @@
   <section class="plane-center">
     <h1>Plane Center</h1>
     <plane-list></plane-list>
-  
+    <button class="btn btn-primary" @click="isAddShow = !isAddShow">Add New Plane </button>
+    <plane-add v-if="isAddShow"></plane-add>
   </section>
 
 </template>
@@ -22,7 +23,7 @@
     },
     data() {
       return {
-      
+      isAddShow : false
       }
     },
     methods: {
