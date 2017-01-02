@@ -1,18 +1,17 @@
 <template lang="html">
 
-  <section class="car-preview thumbnail">
-    <img class="img-responsive" :src="'/static/img/car/' + car.id + '.png'" alt="">
+  <section class="plane-preview thumbnail">
+    <img class="img-responsive" :src="'/static/img/plane/' + plane.model + '.png'" alt="">
     <div class="caption">
-      <h4>{{car.name}}</h4>
-    </div>  
+      <h4>{{plane.model}}</h4>
+    </div>
   </section>
-
 </template>
 
 <script lang="js">
   export default  {
-    name: 'car-preview',
-    props: ['car'],
+    name: 'plane-preview',
+    props: ['plane'],
     mounted() {
 
     },
@@ -31,6 +30,7 @@
 </script>
 
 <style scoped lang="scss">
-  .car-preview {
+  .plane-preview:hover {
+    background-color: #e2feff;
   }
 </style>
