@@ -14,11 +14,12 @@
           <div class="btns">
             <a class="button is-primary">More details</a>
             <a class="button is-success">Edit</a>
+            <a class="button is-danger" @click.stop="deletePassenger(passenger.id)">Delete</a>
           </div>
 
         </div>
       </section>
-s    </div>
+      s </div>
   </div>
 
 </template>
@@ -39,7 +40,10 @@ s    </div>
       }
     },
     methods: {
-
+      deletePassenger(id) {
+        eventBus.$emit('deletePassenger', id);
+        this.shouldDisplay = false;
+      }
     },
     computed: {
 
